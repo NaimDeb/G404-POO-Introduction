@@ -6,17 +6,22 @@ class Chien extends Mammifere {
     private string $race;
 
 
-    public function __construct($race)
+
+    public function __construct(string $race, float $taille, int $age)
     {
         $this-> race = $race;
+        $this->setTaille($taille);
+        $this->setAge($age);
+        
+
 
     }
 
 
 
-    public function crie() {
-        echo "J'aboie";
-        return $this;
+    public function crie(): string
+    {
+        return "Je suis un {$this->race} et j'aboie";
     }
 
 

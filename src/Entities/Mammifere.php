@@ -3,19 +3,19 @@
 class Mammifere extends Animal {
 
 
-    private int $taille;
+    private float $taille;
 
 
-    public function __construct($taille)
-    {
-        $this-> taille = $taille;
 
+
+    public function setTaille($taille){
+        $this -> taille = $taille;
+        return $this -> taille;
     }
 
 
     public function infoPlus() {
-        echo "Je suis un mammifère mgl";
-        return $this;
+        return "Je suis un mammifère et je fais {$this-> taille}m de long <br>";
     }
 
 

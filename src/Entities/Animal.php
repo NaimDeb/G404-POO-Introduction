@@ -1,19 +1,18 @@
 <?php
 
-class Animal {
+// Classe qui a pour seul but de faire de l'héritage     
+abstract class Animal {
 
     private int $age;
 
 
-    public function __construct($age)
-    {
-        $this-> age = $age;
-
+    public function setAge($age){
+        $this -> age = $age;
+        return $this -> age;
     }
 
-    public function info(){
-        echo "Je suis un animal";
-        return $this;
+    public function info(): string{
+        return "Je suis un animal de {$this->age} années <br>";
     }
 
 };

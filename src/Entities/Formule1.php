@@ -9,11 +9,13 @@ class Formule1 {
         
     // }
 
-    public function drive(){
-        echo "Vroom vroom à " . $this->speed . "km/h <br>";
-        return $this;
+    public function drive(): string
+    {
+        return "Vroom vroom à " . $this->speed . "km/h <br>";
+        
     }
-    public function shiftGear(){
+    public function shiftGear(): self
+    {
         $this->speed += 10;
         return $this;
     }

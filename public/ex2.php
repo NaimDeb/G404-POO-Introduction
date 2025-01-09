@@ -4,13 +4,13 @@
 require_once('../utils/autoloader.php');
 
 
-$leCabot = new Chien("sale");
+$leCabot = new Chien("Pitbull", 1.9, 730);
 
-$leCabot->crie();
+echo $leCabot->crie();
 echo "<br>";
-$leCabot->infoPlus();
+echo $leCabot->infoPlus();
 echo "<br>";
-$leCabot->info();
+echo $leCabot->info();
 
 
 
